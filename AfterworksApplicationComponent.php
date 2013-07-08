@@ -8,9 +8,9 @@ class AfterworksApplicationComponent extends CApplicationComponent {
 	}
 
 
-    public function addJob( $job ) {
-    	$this->onExecute = $job;
-    }
+	public function addJob( $job ) {
+		$this->onExecute = $job;
+	}
 
 	public function execute() {
 		if (function_exists('fastcgi_finish_request'))
@@ -25,5 +25,3 @@ class AfterworksApplicationComponent extends CApplicationComponent {
 	}
 
 }
-
-?>
