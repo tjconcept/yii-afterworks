@@ -16,6 +16,7 @@ class AfterworksApplicationComponent extends CApplicationComponent {
 		if (function_exists('fastcgi_finish_request'))
 			fastcgi_finish_request();
 
+		session_write_close();
 		if ($this->hasEventHandler('onExecute'))
 			$this->onExecute(new CEvent($this));
 	}
